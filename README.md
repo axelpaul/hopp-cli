@@ -137,6 +137,7 @@ and raw service errors are suppressed to avoid leaking private payloads.
 bun run check
 bun run build
 bun scripts/verify-mcp.ts
+bun scripts/verify-source-install.ts
 ```
 
 Tests cover every write/auth preview with zero fetch calls, session permissions
