@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mcp.axelpaul.is/catalog.schema.json",
+  "title": "mcp.axelpaul.is catalogue entry",
+  "description": "Put this in a tool repo as mcp-catalog.json. The site syncs it every hour.",
+  "type": "object",
+  "required": [
+    "id",
+    "repo",
+    "name",
+    "service",
+    "tagline",
+    "description",
+    "examples",
+    "category",
+    "auth",
+    "binaries",
+    "tools",
+    "commands",
+    "is"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "The installed command, e.g. vedur"
+    },
+    "repo": {
+      "type": "string",
+      "pattern": "^axelpaul/[A-Za-z0-9._-]+$",
+      "description": "owner/repo of this repository"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Display name"
+    },
+    "service": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The service it talks to"
+    },
+    "serviceUrl": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "tagline": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "One line: what you can do with it"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "description": "2-3 plain sentences"
+    },
+    "examples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Questions someone could ask their assistant"
+    },
+    "category": {
+      "enum": [
+        "Weather",
+        "Food",
+        "Shopping",
+        "Health & booking",
+        "Kids & family",
+        "Finance",
+        "Transport & energy",
+        "Libraries & culture",
+        "Social & community"
+      ]
+    },
+    "auth": {
+      "type": "string",
+      "minLength": 1,
+      "description": "\"none\", \"none for X; ... for Y\", or how login works"
+    },
+    "binaries": {
+      "type": "boolean",
+      "description": "true if releases ship <id>-<os>-<arch> binaries and SHA256SUMS"
+    },
+    "sourceInstall": {
+      "type": "string",
+      "description": "Only if not `bun add -g github:<repo>`"
+    },
+    "requires": {
+      "type": "string",
+      "description": "What a source install needs, if not Bun 1.1+"
+    },
+    "tools": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "write",
+          "description"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "write": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "writesEnvVar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[A-Z0-9_]+_MCP_ENABLE_WRITES$",
+      "description": "Required when any tool has write: true"
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "CLI examples, each starting with the id"
+    },
+    "envVars": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "description"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Extra search words, e.g. Icelandic terms"
+    },
+    "is": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tagline",
+        "description",
+        "examples"
+      ],
+      "properties": {
+        "tagline": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Icelandic tagline"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Icelandic description, 2-3 sentences"
+        },
+        "examples": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Icelandic example questions"
+        },
+        "requires": {
+          "type": "string",
+          "description": "Icelandic version of requires"
+        }
+      }
+    }
+  }
+}

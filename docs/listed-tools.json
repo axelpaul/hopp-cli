@@ -1,0 +1,467 @@
+[
+  {
+    "name": "hopp_cars",
+    "write": false,
+    "description": "List currently listed rental cars across a region, optionally filtered by model. Does not reserve."
+  },
+  {
+    "name": "hopp_upload_logs",
+    "write": true,
+    "description": "UploadLogs: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_add_sign_up_region",
+    "write": true,
+    "description": "AddSignUpRegion: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_simple_me",
+    "write": false,
+    "description": "SimpleMe: read-only service operation"
+  },
+  {
+    "name": "hopp_update_push_token",
+    "write": true,
+    "description": "UpdatePushToken: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_switch_locale",
+    "write": true,
+    "description": "SwitchLocale: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_me",
+    "write": false,
+    "description": "Me: read-only service operation"
+  },
+  {
+    "name": "hopp_user_info",
+    "write": false,
+    "description": "UserInfo: read-only service operation"
+  },
+  {
+    "name": "hopp_update_user",
+    "write": true,
+    "description": "UpdateUser: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_service_messages",
+    "write": false,
+    "description": "ServiceMessages: read-only service operation"
+  },
+  {
+    "name": "hopp_request_user_deletion",
+    "write": true,
+    "description": "RequestUserDeletion: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_has_accepted_tos",
+    "write": false,
+    "description": "HasAcceptedTos: read-only service operation"
+  },
+  {
+    "name": "hopp_accept_tos",
+    "write": true,
+    "description": "AcceptTos: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_report_issues",
+    "write": true,
+    "description": "ReportIssues: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_report_issue_data",
+    "write": false,
+    "description": "ReportIssueData: read-only service operation"
+  },
+  {
+    "name": "hopp_issue_types_for_vehicle",
+    "write": false,
+    "description": "IssueTypesForVehicle: read-only service operation"
+  },
+  {
+    "name": "hopp_toggle_vehicle_lock",
+    "write": true,
+    "description": "ToggleVehicleLock: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_toggle_vehicle_locks",
+    "write": true,
+    "description": "ToggleVehicleLocks: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_initiate_jumio_workflow",
+    "write": true,
+    "description": "InitiateJumioWorkflow: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_add_license",
+    "write": true,
+    "description": "AddLicense: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_get_license_status",
+    "write": false,
+    "description": "GetLicenseStatus: read-only service operation"
+  },
+  {
+    "name": "hopp_enabled_features",
+    "write": false,
+    "description": "EnabledFeatures: read-only service operation"
+  },
+  {
+    "name": "hopp_vehicle_types",
+    "write": false,
+    "description": "VehicleTypes: read-only service operation"
+  },
+  {
+    "name": "hopp_get_vehicle_by_code",
+    "write": false,
+    "description": "getVehicleByCode: read-only service operation"
+  },
+  {
+    "name": "hopp_vehicle_clusters",
+    "write": false,
+    "description": "VehicleClusters: read-only service operation"
+  },
+  {
+    "name": "hopp_all_vehicles",
+    "write": false,
+    "description": "AllVehicles: read-only service operation"
+  },
+  {
+    "name": "hopp_get_tutorial",
+    "write": false,
+    "description": "GetTutorial: read-only service operation"
+  },
+  {
+    "name": "hopp_changed_zones",
+    "write": false,
+    "description": "ChangedZones: read-only service operation"
+  },
+  {
+    "name": "hopp_locate_vehicle",
+    "write": true,
+    "description": "locateVehicle: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_notifications",
+    "write": false,
+    "description": "Notifications: read-only service operation"
+  },
+  {
+    "name": "hopp_get_organizations",
+    "write": false,
+    "description": "GetOrganizations: read-only service operation"
+  },
+  {
+    "name": "hopp_org_invite",
+    "write": false,
+    "description": "OrgInvite: read-only service operation"
+  },
+  {
+    "name": "hopp_join_organization",
+    "write": true,
+    "description": "JoinOrganization: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_countries",
+    "write": false,
+    "description": "Countries: read-only service operation"
+  },
+  {
+    "name": "hopp_set_primary_card",
+    "write": true,
+    "description": "SetPrimaryCard: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_public_coupon_group",
+    "write": false,
+    "description": "PublicCouponGroup: read-only service operation"
+  },
+  {
+    "name": "hopp_marketplace_offerings",
+    "write": false,
+    "description": "MarketplaceOfferings: read-only service operation"
+  },
+  {
+    "name": "hopp_purchase_marketplace_coupon",
+    "write": true,
+    "description": "PurchaseMarketplaceCoupon: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_remove_card",
+    "write": true,
+    "description": "RemoveCard: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_wallet_internals",
+    "write": false,
+    "description": "WalletInternals: read-only service operation"
+  },
+  {
+    "name": "hopp_payment_methods",
+    "write": false,
+    "description": "PaymentMethods: read-only service operation"
+  },
+  {
+    "name": "hopp_single_coupon",
+    "write": false,
+    "description": "SingleCoupon: read-only service operation"
+  },
+  {
+    "name": "hopp_redeem_coupon",
+    "write": true,
+    "description": "RedeemCoupon: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_retry_unpaid_invoices",
+    "write": true,
+    "description": "RetryUnpaidInvoices: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_trip_details",
+    "write": false,
+    "description": "TripDetails: read-only service operation"
+  },
+  {
+    "name": "hopp_fine_details",
+    "write": false,
+    "description": "FineDetails: read-only service operation"
+  },
+  {
+    "name": "hopp_taxi_trip_details",
+    "write": false,
+    "description": "TaxiTripDetails: read-only service operation"
+  },
+  {
+    "name": "hopp_invoices",
+    "write": false,
+    "description": "Invoices: read-only service operation"
+  },
+  {
+    "name": "hopp_adyen_payment_setup",
+    "write": true,
+    "description": "AdyenPaymentSetup: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_advanced_adyen_payment_setup",
+    "write": true,
+    "description": "AdvancedAdyenPaymentSetup: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_adyen_submit_card_info",
+    "write": true,
+    "description": "AdyenSubmitCardInfo: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_adyen_submit_payment_details",
+    "write": true,
+    "description": "AdyenSubmitPaymentDetails: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_ride_history",
+    "write": false,
+    "description": "RideHistory: read-only service operation"
+  },
+  {
+    "name": "hopp_invoice_history",
+    "write": false,
+    "description": "InvoiceHistory: read-only service operation"
+  },
+  {
+    "name": "hopp_rent_vehicle",
+    "write": true,
+    "description": "rentVehicle: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_end_rent",
+    "write": true,
+    "description": "endRent: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_all_active_trips",
+    "write": false,
+    "description": "allActiveTrips: read-only service operation"
+  },
+  {
+    "name": "hopp_get_active_trips",
+    "write": false,
+    "description": "getActiveTrips: read-only service operation"
+  },
+  {
+    "name": "hopp_all_trips",
+    "write": false,
+    "description": "allTrips: read-only service operation"
+  },
+  {
+    "name": "hopp_rent_requirements",
+    "write": false,
+    "description": "RentRequirements: read-only service operation"
+  },
+  {
+    "name": "hopp_all_parking_statuses",
+    "write": false,
+    "description": "AllParkingStatuses: read-only service operation"
+  },
+  {
+    "name": "hopp_unlock_helmet",
+    "write": true,
+    "description": "UnlockHelmet: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_update_trip_payment_method",
+    "write": true,
+    "description": "UpdateTripPaymentMethod: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_end_group_rent",
+    "write": true,
+    "description": "endGroupRent: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_tutorials_in_region",
+    "write": false,
+    "description": "TutorialsInRegion: read-only service operation"
+  },
+  {
+    "name": "hopp_get_vehicle_photo",
+    "write": false,
+    "description": "getVehiclePhoto: read-only service operation"
+  },
+  {
+    "name": "hopp_parking_rules",
+    "write": false,
+    "description": "ParkingRules: read-only service operation"
+  },
+  {
+    "name": "hopp_vehicle_id",
+    "write": false,
+    "description": "VehicleId: read-only service operation"
+  },
+  {
+    "name": "hopp_report_parking_violation",
+    "write": true,
+    "description": "ReportParkingViolation: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_vehicle",
+    "write": false,
+    "description": "Vehicle: read-only service operation"
+  },
+  {
+    "name": "hopp_log_demand_location",
+    "write": true,
+    "description": "LogDemandLocation: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_region",
+    "write": false,
+    "description": "Region: read-only service operation"
+  },
+  {
+    "name": "hopp_all_regions",
+    "write": false,
+    "description": "AllRegions: read-only service operation"
+  },
+  {
+    "name": "hopp_single_vehicle",
+    "write": false,
+    "description": "SingleVehicle: read-only service operation"
+  },
+  {
+    "name": "hopp_pre_rent_info",
+    "write": false,
+    "description": "PreRentInfo: read-only service operation"
+  },
+  {
+    "name": "hopp_fleet",
+    "write": false,
+    "description": "Fleet: read-only service operation"
+  },
+  {
+    "name": "hopp_vehicle_type",
+    "write": false,
+    "description": "VehicleType: read-only service operation"
+  },
+  {
+    "name": "hopp_map_items",
+    "write": false,
+    "description": "MapItems: read-only service operation"
+  },
+  {
+    "name": "hopp_complete_tutorial",
+    "write": true,
+    "description": "CompleteTutorial: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_active_taxi_trip",
+    "write": false,
+    "description": "ActiveTaxiTrip: read-only service operation"
+  },
+  {
+    "name": "hopp_autocomplete_place",
+    "write": false,
+    "description": "autocompletePlace: read-only service operation"
+  },
+  {
+    "name": "hopp_autocomplete",
+    "write": false,
+    "description": "autocomplete: read-only service operation"
+  },
+  {
+    "name": "hopp_rider_cancel_trip",
+    "write": true,
+    "description": "RiderCancelTrip: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_rate_driver",
+    "write": true,
+    "description": "RateDriver: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_request_quote",
+    "write": false,
+    "description": "RequestQuote: read-only service operation"
+  },
+  {
+    "name": "hopp_request_trip",
+    "write": true,
+    "description": "RequestTrip: changes service state; confirm=false previews only"
+  },
+  {
+    "name": "hopp_reverse_lookup",
+    "write": false,
+    "description": "ReverseLookup: read-only service operation"
+  },
+  {
+    "name": "hopp_reverse_lookup_missing_data",
+    "write": false,
+    "description": "ReverseLookupMissingData: read-only service operation"
+  },
+  {
+    "name": "hopp_taxi_region_vehicles",
+    "write": false,
+    "description": "TaxiRegionVehicles: read-only service operation"
+  },
+  {
+    "name": "hopp_trip_ending",
+    "write": false,
+    "description": "TripEnding: read-only service operation"
+  },
+  {
+    "name": "hopp_taxi_trip_route",
+    "write": false,
+    "description": "taxiTripRoute: read-only service operation"
+  },
+  {
+    "name": "hopp_unrated_taxi_trip",
+    "write": false,
+    "description": "UnratedTaxiTrip: read-only service operation"
+  },
+  {
+    "name": "hopp_update_rider_position",
+    "write": true,
+    "description": "UpdateRiderPosition: changes service state; confirm=false previews only"
+  }
+]

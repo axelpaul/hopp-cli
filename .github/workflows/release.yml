@@ -1,0 +1,45 @@
+name: Release
+
+# Builds single-file binaries for the mcp.axelpaul.is install script on every
+# v* tag. The command name comes from the first entry in package.json "bin";
+# the tag must match package.json "version".
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bun run check
+      - name: Check the tag matches package.json
+        run: |
+          version="$(node -p 'require("./package.json").version')"
+          test "${GITHUB_REF_NAME}" = "v${version}" || { echo "Tag ${GITHUB_REF_NAME} does not match package.json version ${version}"; exit 1; }
+      - name: Build binaries
+        run: |
+          cli="$(node -p 'Object.keys(require("./package.json").bin)[0]')"
+          entry="$(node -p 'Object.values(require("./package.json").bin)[0]')"
+          mkdir -p dist
+          for target in linux-x64 linux-arm64 darwin-x64 darwin-arm64 windows-x64; do
+            os="${target%-*}"
+            arch="${target#*-}"
+            out="dist/${cli}-${os}-${arch}"
+            if [ "$os" = windows ]; then out="${out}.exe"; fi
+            bun build --compile --minify --target="bun-${target}" "$entry" --outfile "$out"
+          done
+          cd dist && sha256sum "${cli}"-* > SHA256SUMS
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*-linux-*
+            dist/*-darwin-*
+            dist/*-windows-*
+            dist/SHA256SUMS
+          generate_release_notes: true

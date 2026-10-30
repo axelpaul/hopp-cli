@@ -1,0 +1,5 @@
+node_modules/
+hopp
+.private/
+*.log
+.env*
